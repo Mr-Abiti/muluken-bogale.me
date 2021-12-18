@@ -11,10 +11,11 @@ import {
   SimpleGrid,
   useColorMode,
 } from '@chakra-ui/react'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin, FaPhone, FaPhoneSquare } from 'react-icons/fa'
 import { useQuery } from 'react-query'
 import { BsPauseFill } from 'react-icons/bs'
 import SocialIcons from './SocialIcons'
+import { icons } from 'react-icons/lib'
 
 const Footer = (): JSX.Element => {
   const { colorMode } = useColorMode()
@@ -40,7 +41,21 @@ const Footer = (): JSX.Element => {
         align='center'
       >
         <Flex direction='row' maxW='full' mx={{ base: `auto`, md: 5 }} alignItems='center'>
-          {currentlyPlaying?.isPlaying ? (
+        <SocialIcons label='Phone' href='#'>
+            <FaPhone />
+          </SocialIcons>
+          <chakra.a
+                color={colorMode === 'light' ? `gray.900` : `gray.200`}
+                fontSize='md'
+                fontWeight='semibold'
+                maxW='60%'
+                isTruncated
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                +251986088963
+              </chakra.a>
+          {/* {currentlyPlaying?.isPlaying ? (
             <Icon h={4} w={4} viewBox='0 0 168 168' color='brand.500'>
               <path
                 fill='currentColor'
@@ -49,9 +64,9 @@ const Footer = (): JSX.Element => {
             </Icon>
           ) : (
             <Icon color='brand.500' boxSize='1.4em' as={BsPauseFill} />
-          )}
+          )} */}
 
-          <Flex ml={2} isTruncated>
+          {/* <Flex ml={2} isTruncated>
             {currentlyPlaying?.songUrl ? (
               <chakra.a
                 color={colorMode === 'light' ? `gray.900` : `gray.200`}
@@ -84,9 +99,9 @@ const Footer = (): JSX.Element => {
               {` – `}
             </chakra.span>
             <chakra.p color='gray.600' isTruncated maxW='full'>
-              {currentlyPlaying?.artist ?? `Spotify`}
+              
             </chakra.p>
-          </Flex>
+          </Flex> */}
         </Flex>
         <Text display='flex' alignSelf='center' mx='auto'>
           Built with:

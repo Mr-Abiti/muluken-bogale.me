@@ -19,35 +19,36 @@ import { useEffect } from 'react';
 
 const links = [
   {
-    name: 'Blog',
-    link: '/blog',
-  },
-  {
     name: `Projects`,
     link: `/projects`,
   },
   {
-    name: `Research`,
-    link: `/research`,
+    name: `Services`,
+    link: `/services`,
   },
   {
-    type: `dropdown`,
-    name: `Other`,
-    links: [
-      {
-        name: `Tools`,
-        link: `/tools`,
-      },
-      {
-        name: `Links`,
-        link: `/links`,
-      },
-      {
-        name: `Music`,
-        link: `/spotify`,
-      },
-    ],
+    name: 'Contact',
+    link: '/contact',
   },
+  {
+    name: `Links`,
+    link: `/links`,
+  },
+  // {
+  //   type: `dropdown`,
+  //   name: `Other`,
+  //   links: [
+      // {
+      //   name: `Blogs`,
+      //   link: `/tools`,
+      // },
+      
+      // {
+      //   name: `Music`,
+      //   link: `/spotify`,
+      // },
+    // ],
+  // },
 ];
 
 function Nav(): JSX.Element {
@@ -134,7 +135,7 @@ function Nav(): JSX.Element {
                   }}
                   color={colorMode === 'light' ? 'gray.900' : 'white'}
                 >
-                  Michael Hall
+                 Muluken Bogale
                 </ChakraLink>
               )}
             </Link>
@@ -157,7 +158,7 @@ const AnimatedTitle = () => (
     fontWeight='semibold'
     textAlign='center'
   >
-    Michael Hall
+    Muluken Bogale
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <chakra.svg
       className='path-under'

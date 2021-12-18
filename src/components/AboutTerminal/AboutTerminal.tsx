@@ -51,7 +51,7 @@ const AboutTerminal = (): JSX.Element => {
           position='absolute'
           justifyContent='center'
         >
-          <Text>{finished ? 'Executed' : 'Executing'}: introduceSelf.js</Text>
+          <Text>{finished ? 'Executed' : 'Executing'}: Who is Muluken Bogale?</Text>
         </Flex>
       </Flex>
       <Flex
